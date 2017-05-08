@@ -1,0 +1,9 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+
+## [1.0.0] - 08-05-2017
+
+### Added
+- Add Dockerfile
+- Add README
+- Add examples for .bat and .sh scripts
