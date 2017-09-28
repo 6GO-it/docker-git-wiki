@@ -1,6 +1,19 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 28-09-2017
+
+### Added
+- Add .dockerignore file
+
+### Changed
+- Update Dockerfile base image
+- Improve Dockerfile performance
+- Fix README content
+
+### Fixed
+- Fix .bat wrong syntax
+
 ## [1.0.0] - 08-05-2017
 
 ### Added
