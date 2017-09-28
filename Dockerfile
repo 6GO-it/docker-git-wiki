@@ -2,12 +2,11 @@
 FROM ruby:stretch
 
 # Install necessary library and gem file
-RUN apt-get -y update \
-    && apt-get -y install libicu-dev \
-    && gem install --no-ri --no-rdoc gollum github-markdown org-ruby
-
 # Clean up all the mess done by installing stuff
-RUN apt-get remove --purge -y software-properties-common && \
+RUN apt-get -y update && \
+    apt-get -y install libicu-dev && \
+    gem install --no-ri --no-rdoc gollum github-markdown org-ruby &&\
+    apt-get remove --purge -y software-properties-common && \
     apt-get autoremove -y && \
     apt-get clean && \
     apt-get autoclean && \
@@ -16,6 +15,7 @@ RUN apt-get remove --purge -y software-properties-common && \
     rm -rf /usr/share/man/?? && \
     rm -rf /usr/share/man/??_*
 
+# Set the base working directory
 VOLUME /wiki
 WORKDIR /wiki
 
