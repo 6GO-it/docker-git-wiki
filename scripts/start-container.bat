@@ -1,1 +1,1 @@
-docker run --rm -it -v "$(pwd):/wiki" -p 4567:2370 git-wiki
+docker run --rm -it -v "%cd%:/wiki" -p 4567:2370 git-wiki
